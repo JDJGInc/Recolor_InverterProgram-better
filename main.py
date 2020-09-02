@@ -300,13 +300,17 @@ jdjg = 0
 
 if want_it2 == "yes":
 
-  print("\nOrginal Color that was inverted and was inverted back: ")
+  print("\nOrginal Color Code that was inverted and was inverted back: ")
 
   while jdjg < len(Inverted_color_code_inverted):
 
     print(Inverted_color_code_inverted[jdjg])
 
     jdjg = jdjg + 1
+
+  print("\nOrginal color code:")
+
+  print(complete_color_code)
 
 
 
