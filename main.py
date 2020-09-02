@@ -89,67 +89,26 @@ while x < len(lines):
 
   color_section2 = colored_bit2[1]
 
-  first_bit = color_section[0:1]
 
-  second_bit = color_section[1:2]
+  r = int(color_section[0:2], 16)
+  g = int(color_section[2:4], 16)
+  b = int(color_section2[0:2], 16)
 
-  third_bit = color_section[2:3]
+  r = 0xFF - r
+  g = 0xFF - g
+  b = 0xFF - b
 
-  fourth_bit = color_section[3:4]
+  #solution suggested by John10v10#5883
 
-  fifth_bit = color_section2[0:1]
+  bits_used998 = f"{r:0{2}x}{g:0{2}x}{b:0{2}x}"
 
-  sixth_bit = color_section2[1:2]
+  first_color_line =  bits_used998[0:4].upper()
 
-  seventh_bit = color_section2[2:3]
-
-  eighth_bit = color_section2[3:4]
-
-  first_bit_16 = int(first_bit,16)
-
-  second_bit_16 = int(second_bit,16)
-
-  third_bit_16 = int(third_bit,16)
-
-  fourth_bit_16 =  int(fourth_bit,16)
-
-  fifth_bit_16 =  int(fifth_bit,16)
-  
-  sixth_bit_16 = int(sixth_bit,16)
-
-  inverted_first_bit_16 = 255-int(first_bit_16)
-
-  inverted_second_bit_16 = 255-int(second_bit_16)
-
-  inverted_third_bit_16 = 255-int(third_bit_16)
-
-  inverted_fourth_bit_16 = 255-int(fourth_bit_16)
-
-  inverted_fifth_bit_16 = 255-int(fifth_bit_16)
-
-  inverted_sixth_bit_16 = 255-int(sixth_bit_16)
-
-  #now hex conversions will happen
-
-  inverted_first_bit_16_hex = str(hex(inverted_first_bit_16))[3:4]
-
-  inverted_second_bit_16_hex = str(hex(inverted_second_bit_16))[3:4]
-
-  inverted_third_bit_16_hex = str(hex(inverted_third_bit_16))[3:4]
-  
-  inverted_fourth_bit_16_hex = str(hex(inverted_fourth_bit_16))[3:4]
-
-  inverted_fifth_bit_16_hex = str(hex(inverted_fifth_bit_16 ))[3:4]
-
-  inverted_sixth_bit_16_hex = str(hex(inverted_sixth_bit_16))[3:4]
-
-  first_color_line = inverted_first_bit_16_hex.upper()+inverted_second_bit_16_hex.upper()+ inverted_third_bit_16_hex.upper()+inverted_fourth_bit_16_hex.upper()
-
-  second_color_line = inverted_fifth_bit_16_hex.upper()+inverted_sixth_bit_16_hex+seventh_bit.upper()+eighth_bit.upper()
+  second_color_line = bits_used998[4:6].upper()
 
   color_code_needed = color_code_front+" "+first_color_line
 
-  color_code_needed_2 = color_code_front2+" "+second_color_line
+  color_code_needed_2 = color_code_front2+" "+second_color_line+color_section2[2:4]
 
   Inverted_color_code.append(color_code_needed)
 
