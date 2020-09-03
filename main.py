@@ -256,6 +256,14 @@ while jdjg_2 < len(lines):
 
 print(test_string998)
 
+if test_string == test_string998:
+
+  print("\n run 100% succesfully")
+
+if not test_string == test_string998:
+
+  print("\n didn't run successfully")
+
 
 
 
