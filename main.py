@@ -14,35 +14,10 @@ def clear():
 
 #Thank you https://www.geeksforgeeks.org/clear-screen-python/
 
-complete_color_code = """
-8107EC40 0000
-8107EC42 FF00
-8107EC38 0000
-8107EC3A FF00
-8107ECA0 7306
-8107ECA2 0000
-8107EC98 3903
-8107EC9A 0000
-8107EC88 FEC1
-8107EC8A 7900
-8107EC80 7F60
-8107EC82 3C00
-8107EC58 FFFF
-8107EC5A FF00
-8107EC50 7F7F
-8107EC52 7F00
-8107EC28 0000
-8107EC2A 0000
-8107EC68 2F0E
-8107EC6A 0700
-8107EC20 0000
-8107EC22 0000
-8107EC70 721C
-8107EC72 0E00"""
+complete_color_code = open("color_code.txt", "r")
 
 
-
-#Insert your color code into complete_color_code(make sure it's still with """ on both sides a.k.a 3 ") - default one is SMG3's Color Code - must be a complete color code with all the hat information, etc. not an uncomplete one(so yes, it needs values, that you wouldn't use normally.)
+#insert the color code into the color_code.txt file.
 
 clear()
 
@@ -64,9 +39,28 @@ Inverted_color_code_inverted = [
 
 #here to check if both color codes match
 
-lines=complete_color_code.split("\n")
+lines = complete_color_code.readlines()
+
+start_needed = ""
+
+times_running64 = 0
+
+while times_running64 < len(lines):
+
+  needed_file=lines[times_running64]
+
+  start_needed = start_needed+needed_file
+
+  times_running64 = times_running64 + 1
+
+
+#used orginally when the color code was in the main.py
 
 times_ran_1 = 0
+
+complete_color_code = str(start_needed)
+
+lines=complete_color_code.split("\n")
 
 
 while times_ran_1 < len(lines):
