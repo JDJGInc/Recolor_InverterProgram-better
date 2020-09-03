@@ -243,25 +243,6 @@ if want_it2 == "yes":
 
   print(complete_color_code[good_file:let_us_see])
 
-jdjg_2 = int(times_ran_1)
-
-final_version = ""
-
-if jdjg_2 < len(lines):
-
-  useful_info99 = lines[jdjg_2]+"\n"
-
-  final_version = final_version+useful_info99
-
-  jdjg_2 = jdjg_2 + 1
-
-
-
-
-if test_string == final_version:
-
-  print("\n Successful")
-
 
 
 
