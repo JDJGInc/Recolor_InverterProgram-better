@@ -230,7 +230,11 @@ if want_it2 == "yes":
 
   print("\nOrginal color code:")
 
-  print(complete_color_code)
+  good_file = int(times_ran_1)
+
+  let_us_see=len(complete_color_code)-good_file
+
+  print(complete_color_code[good_file:let_us_see])
 
 
 
