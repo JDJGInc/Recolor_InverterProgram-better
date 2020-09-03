@@ -36,14 +36,10 @@ complete_color_code = """
 #Insert your color code into complete_color_code(make sure it's still with """ on both sides a.k.a 3 ") - default one is SMG3's Color Code - must be a complete color code with all the hat information, etc. not an uncomplete one(so yes, it needs values, that you wouldn't use normally.)
 
 Inverted_color_code = [
-
-  "",
   
 ]
 
 Inverted_color_code_inverted = [
-
-  "",
   
 ]
 
@@ -59,6 +55,12 @@ while times_ran_1 < len(lines):
   if '' == lines[times_ran_1]:
 
     times_ran_1 = times_ran_1+1
+
+    Inverted_color_code.append('')
+
+    Inverted_color_code_inverted.append('')
+
+    #it should always be correct, unless the hexcode doesn't work, right
 
   if not '' == lines[times_ran_1]:
 
