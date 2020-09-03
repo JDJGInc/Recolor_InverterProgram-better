@@ -1,13 +1,5 @@
 import clear_code
 
-clear_code.clear()
-
-#function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
-
-#the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
-
-#explained to me by: https://www.youtube.com/watch?v=5lZ31AlgNzw
-
 complete_color_code = """
 8107EC40 0000
 8107EC42 FF00
@@ -35,6 +27,16 @@ complete_color_code = """
 8107EC72 0E00"""
 
 #Insert your color code into complete_color_code(make sure it's still with """ on both sides a.k.a 3 ") - default one is SMG3's Color Code - must be a complete color code with all the hat information, etc. not an uncomplete one(so yes, it needs values, that you wouldn't use normally.)
+
+clear_code.clear()
+
+#function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
+
+#the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
+
+#explained to me by: https://www.youtube.com/watch?v=5lZ31AlgNzw
+
+
 
 Inverted_color_code = [
   
@@ -205,6 +207,8 @@ if not Inverted_color_code_inverted == lines:
 
 j = int(times_ran_1)
 
+test_string99 = ""
+
 
 if want_it == "yes":
 
@@ -213,9 +217,12 @@ if want_it == "yes":
 
   while j < len(Inverted_color_code):
 
-    print(Inverted_color_code[j])
+    test_string99 = test_string99+(Inverted_color_code[j]+"\n")
+
 
     j = j + 1
+
+  print(test_string99)
 
 jdjg = int(times_ran_1)
 
@@ -227,9 +234,7 @@ if want_it2 == "yes":
 
   while jdjg < len(Inverted_color_code_inverted):
 
-    useful_info = Inverted_color_code_inverted[jdjg]+"\n"
-
-    test_string = test_string+useful_info
+    test_string = test_string+(Inverted_color_code_inverted[jdjg]+"\n")
 
     jdjg = jdjg + 1
 
@@ -237,12 +242,19 @@ if want_it2 == "yes":
 
   print("\nOrginal color code:")
 
-  good_file = int(times_ran_1)
 
-  let_us_see=len(complete_color_code)
 
-  print(complete_color_code[good_file:let_us_see])
+jdjg_2 = times_ran_1
 
+test_string998 = ""
+
+while jdjg_2 < len(lines):
+
+  test_string998 = test_string998+(lines[jdjg_2]+"\n")
+
+  jdjg_2 = jdjg_2 + 1
+
+print(test_string998)
 
 
 
