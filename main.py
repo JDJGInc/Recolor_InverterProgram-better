@@ -1,4 +1,20 @@
-import clear_code
+from os import system, name
+
+# import only system from os 
+
+# define our clear function 
+
+def clear(): 
+  
+    # for windows 
+    if name == 'nt': 
+        _ = system('cls') 
+  
+    # for mac and linux(here, os.name is 'posix') 
+    else: 
+        _ = system('clear') 
+
+#Thank you https://www.geeksforgeeks.org/clear-screen-python/
 
 complete_color_code = """
 8107EC40 0000
@@ -26,9 +42,11 @@ complete_color_code = """
 8107EC70 721C
 8107EC72 0E00"""
 
+
+
 #Insert your color code into complete_color_code(make sure it's still with """ on both sides a.k.a 3 ") - default one is SMG3's Color Code - must be a complete color code with all the hat information, etc. not an uncomplete one(so yes, it needs values, that you wouldn't use normally.)
 
-clear_code.clear()
+clear()
 
 #function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
 
@@ -192,13 +210,13 @@ if Inverted_color_code_inverted == lines:
 
   want_it = "yes"
 
-  want_it2 = input("\nWant the orginal to test the difference?: ")
+  want_it2 = "yes"
 
 if not Inverted_color_code_inverted == lines:
 
   print("\nColor failed....")
 
-  want_it = input("\n Want it anyway? (yes or no) - default is no: ")
+  want_it = "yes"
 
   want_it2 = "yes"
 
