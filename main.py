@@ -1,7 +1,5 @@
 from os import system, name
 
-# import only system from os 
-
 # define our clear function 
 
 def clear(): 
@@ -291,4 +289,8 @@ if not test_string == test_string998:
 
 #https://repl.it/@JDJGInc_Offical/RecolorInverter-optimized
 
+while True:
 
+  input("\n press any button to close this window")
+
+  break
