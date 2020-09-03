@@ -1,8 +1,6 @@
-#under a command(this is why there is two indents)
-
-    #function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
-
-    #the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
+    #this code goes under a command
+    
+    ##the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
 
     #explained to me by: https://www.youtube.com/watch?v=5lZ31AlgNzw
 
@@ -95,7 +93,7 @@
 
       times_ran_program_1 = times_ran_program_1 + 1
 
-    print("all",x-times_ran_1,"of the color code lines ran!")
+    useful_info = "all"+" "+str(x-times_ran_1)+" "+"of the color code lines ran!"
 
     times_ran_1 = 0
 
@@ -160,42 +158,54 @@
 
     if Inverted_color_code_inverted == lines:
 
-      print("\nYour color code was succesfully inverted")
+      inverting_results = ("Your color code was succesfully inverted")
 
       want_it = "yes"
 
-      want_it2 = input("\nWant the orginal to test the difference?: ")
+      want_it2 = "yes"
 
     if not Inverted_color_code_inverted == lines:
 
-      print("\nColor failed....")
+      inverting_results = ("Color code Inverting failed....")
 
-      want_it = input("\n Want it anyway? (yes or no) - default is no: ")
+      want_it = "yes"
 
       want_it2 = "yes"
+
+    
+    required_info=useful_info+"\n"+inverting_results
+
+    required_info99 = discord.Embed(title="Results",description=required_info)
+
+    await message.channel.send(embed=required_info99)
 
 
 
 
     j = int(times_ran_1)
 
+    test_string99 = ""
+
 
     if want_it == "yes":
 
-      print("\nInverted Color Code:")
-
-
       while j < len(Inverted_color_code):
 
-        print(Inverted_color_code[j])
+        required_recolor_lines=Inverted_color_code[j]+"\n"
+
+        test_string99 = test_string99+required_recolor_lines
 
         j = j + 1
+
+      inverted_information=discord.Embed(title="Inverted Color Code:",description=test_string99)
+
+      await message.channel.send(embed=inverted_information)
+
+      
 
     jdjg = int(times_ran_1)
 
     if want_it2 == "yes":
-
-      print("\nOrginal Color Code that was inverted and was inverted back: ")
 
       test_string = ""
 
@@ -207,24 +217,18 @@
 
         jdjg = jdjg + 1
 
-      print(test_string)
+      values_needed=discord.Embed(title="Orginal Color Code that was inverted and was inverted back: ",description=test_string)
 
-      print("\nOrginal color code:")
+      await message.channel.send(embed=values_needed)
 
       good_file = int(times_ran_1)
 
       let_us_see=len(complete_color_code)
 
-      print(complete_color_code[good_file:let_us_see])
+      orginal_color_code = complete_color_code[good_file:let_us_see]
 
+      final_return=discord.Embed(title="Orginal color code:",description=orginal_color_code)
 
+      await message.channel.send(embed=final_return)
 
-
-
-    #Old inverters(don't work as well):
-
-    #https://repl.it/@JDJGInc_Offical/RecolorInverter#main.py
-
-    #https://repl.it/@JDJGInc_Offical/RecolorInverter-optimized
-
-
+    return
