@@ -202,7 +202,7 @@ if not Inverted_color_code_inverted == lines:
 
 
 
-j = 0
+j = int(times_ran_1)
 
 
 if want_it == "yes":
@@ -216,7 +216,7 @@ if want_it == "yes":
 
     j = j + 1
 
-jdjg = 0
+jdjg = int(times_ran_1)
 
 if want_it2 == "yes":
 
