@@ -1,7 +1,8 @@
-import math
 import clear_code
 
 clear_code.clear()
+
+#function version: https://repl.it/@JDJGInc_Offical/InvertRecolorProgram-function#main.py
 
 #the first digits like 8(refer to N64 usually, the only color bit is the 4 digits on the right.... - we still need to reinsert them imnto memory)
 
@@ -222,19 +223,44 @@ if want_it2 == "yes":
 
   print("\nOrginal Color Code that was inverted and was inverted back: ")
 
+  test_string = ""
+
   while jdjg < len(Inverted_color_code_inverted):
 
-    print(Inverted_color_code_inverted[jdjg])
+    useful_info = Inverted_color_code_inverted[jdjg]+"\n"
+
+    test_string = test_string+useful_info
 
     jdjg = jdjg + 1
+
+  print(test_string)
 
   print("\nOrginal color code:")
 
   good_file = int(times_ran_1)
 
-  let_us_see=len(complete_color_code)-good_file
+  let_us_see=len(complete_color_code)
 
   print(complete_color_code[good_file:let_us_see])
+
+jdjg_2 = int(times_ran_1)
+
+final_version = ""
+
+if jdjg_2 < len(lines):
+
+  useful_info99 = lines[jdjg_2]+"\n"
+
+  final_version = final_version+useful_info99
+
+  jdjg_2 = jdjg_2 + 1
+
+
+
+
+if test_string == final_version:
+
+  print("\n Successful")
 
 
 
